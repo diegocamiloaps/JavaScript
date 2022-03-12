@@ -8,13 +8,12 @@
 </head>
 <style>
     body {
-      
     background-color: darkgrey;
     font: normal 18pt Arial;
     text-align: center;
     width: 610px;
     height: 780px;
-    border: 2px solid black;
+    border: 5px solid black;
     border-radius: 20px;
         
     }
@@ -27,18 +26,20 @@
         font: bold 20pt Arial;
         color: blue;
     }
+    
     div#res {
         display: inline-block;
-        background-color: white;
-        border: 1px solid black;
-        text-align: center;
+        background-color: rgb(2, 2, 2);
+        font:  normal 180pt Arial;
+        color: green;
         width: 300px;
         height: 300px;
-        border-radius: 500px;
-        border text-shadow: 10 20 10 ;
+        padding:  60px;
+        border-radius: 500px;      
     }
     h2 {
         font-size: 2.5em;
+        color: brown;
     }
 </style>
 <body>
@@ -46,10 +47,22 @@
         <h1>Velocidade (Radar)</h1>
        Digite a velocidade <input type="Number" id="txtvl">
         <input type="button", value="Verificar" onclick="calcular()">
-        <h2>80 Km/h</h2>
-        <p>
-            <div id="res"></div>
-        </p>
+        Limite 
+        <strong>
+            <h2>Limite - 80 Km/h</h2>
+        </strong>
+        <div id="res"></div>
     </div>
+    <script>
+        function calcular(){
+            var txtv = window.document.querySelector('input#txtvl')
+            var res = window.document.querySelector('div#res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<strong>${vel}</strong></p>`
+            if (vel > 80 ) {
+                res.style.color = `red`
+            } 
+       }
+    </script>
 </body>
 </html>
