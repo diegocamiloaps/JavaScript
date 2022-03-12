@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 01 (radar)- JavaScript</title>
+</head>
+<style>
+    body {
+      
+    background-color: darkgrey;
+    font: normal 18pt Arial;
+    text-align: center;
+    width: 610px;
+    height: 780px;
+    border: 2px solid black;
+    border-radius: 20px;
+        
+    }
+    div#div01 {
+        border-radius: 20px;
+
+    }
+    input#txtvl {
+        width: 60px;
+        font: bold 20pt Arial;
+        color: blue;
+    }
+    div#res {
+        display: inline-block;
+        background-color: white;
+        border: 1px solid black;
+        text-align: center;
+        width: 300px;
+        height: 300px;
+        border-radius: 500px;
+        border text-shadow: 10 20 10 ;
+    }
+    h2 {
+        font-size: 2.5em;
+    }
+</style>
+<body>
+    <div id="div01">
+        <h1>Velocidade (Radar)</h1>
+       Digite a velocidade <input type="Number" id="txtvl">
+        <input type="button", value="Verificar" onclick="calcular()">
+        <h2>80 Km/h</h2>
+        <p>
+            <div id="res"></div>
+        </p>
+    </div>
+</body>
+</html>
