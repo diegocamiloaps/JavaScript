@@ -8,11 +8,16 @@ function contar(){
         window.alert ('[ERRO!]Preencha os dados corretamente!')
     } else {
            // alert('Tudo ok!')
-        res.innerHTML = `Contando:`
+        res.innerHTML = `Contando: <br>`
         //convertendo em Numero
         var i = Number(inicio.value)
         var f = Number(fim.value)
         var p = Number(passo.value)
+        //se o passo for 0 ira receber o valor de (1)
+        if (p <= 0) {
+            window.alert('Passo Invalido!')
+            p = 1
+        }
         //iniciando o contador 
       if (i < f) {
         //contagem crescente
